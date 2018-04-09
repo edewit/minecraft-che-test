@@ -165,7 +165,10 @@ objects:
               -XX:+UseCGroupMemoryLimitForHeap -XX:+UseParallelGC
               -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4
           - name: MAVEN_OPTS
-            value: '-Xms256m -Xmx256m'
+            value: >-
+              -Xms128m -Xmx128m -XX:+UnlockExperimentalVMOptions
+              -XX:+UseCGroupMemoryLimitForHeap -XX:+UseParallelGC
+              -XX:MinHeapFreeRatio=5 -XX:MaxHeapFreeRatio=10 -XX:GCTimeRatio=4
           image: minecraft-server:latest
           imagePullPolicy: IfNotPresent
           name: minecraft-server
