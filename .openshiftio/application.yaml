@@ -41,7 +41,7 @@ objects:
     - name: latest
       from:
         kind: DockerImage
-        name: docker.io/edewit/minecraft-plugin-centos
+        name: docker.io/edewit/minecraft-osgi-plugin-s2i
 - apiVersion: v1
   kind: BuildConfig
   metadata:
