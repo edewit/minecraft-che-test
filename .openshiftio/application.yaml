@@ -176,15 +176,6 @@ objects:
           - containerPort: 7791
             name: http
             protocol: TCP
-          readinessProbe:
-            failureThreshold: 3
-            httpGet:
-              path: /
-              port: 7791
-              scheme: HTTP
-            initialDelaySeconds: 596
-            periodSeconds: 10
-            timeoutSeconds: 1
           resources:
             limits:
               cpu: '2'
